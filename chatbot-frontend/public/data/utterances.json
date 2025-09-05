@@ -1,0 +1,22 @@
+[
+  {
+    "text": "I want to book a flight to New York on June 15th",
+    "intent": "book_flight",
+    "entities": [["New York", "location", 24, 32], ["June 15th", "date", 36, 45]]
+  },
+  {
+    "text": "Find a restaurant near Chennai tomorrow",
+    "intent": "find_restaurant",
+    "entities": [["Chennai", "location", 24, 31], ["tomorrow", "date", 33, 41]]
+  },
+  {
+    "text": "Book flight to Delhi on 21 June",
+    "intent": "book_flight",
+    "entities": [["Delhi", "location", 16, 21], ["21 June", "date", 25, 32]]
+  },
+  {
+    "text": "i want to eat chicken briyani",
+    "intent": "find_hotel",
+    "entities": [["chicken briyani", "nonveg", 14, 29]]
+  }
+]

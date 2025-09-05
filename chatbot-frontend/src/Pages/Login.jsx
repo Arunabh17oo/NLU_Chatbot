@@ -4,7 +4,7 @@ import Typed from 'typed.js'
 import { FiMail, FiLock, FiEye, FiEyeOff } from 'react-icons/fi'
 import './login.css'
 
-function Login({ goToSignup }) {
+function Login({ goToSignup, onLoginSuccess }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
@@ -33,6 +33,9 @@ function Login({ goToSignup }) {
       })
       if (res.status === 200) {
         alert('Login successful')
+        const token = res?.data?.token
+        if (token) localStorage.setItem('auth_token', token)
+        if (typeof onLoginSuccess === 'function') onLoginSuccess()
       }
     } catch (err) {
       const status = err?.response?.status

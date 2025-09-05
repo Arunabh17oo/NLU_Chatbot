@@ -40,7 +40,7 @@ function Signup({ goToLogin }) {
       const status = err?.response?.status
       const message = err?.response?.data?.message
       if (status === 409) {
-        alert('Account already exists')
+        alert('Email already exists')
       } else if (message) {
         alert(message)
       } else {
